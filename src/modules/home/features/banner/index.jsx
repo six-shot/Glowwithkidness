@@ -3,7 +3,7 @@ import React from 'react'
 export default function Banner() {
   return (
     <div className="grid sm:grid-cols-3 grid-cols-1 sm:gap-10 gap-6 px-[5%] mt-[500px] ">
-      <div className="col-span-1">
+      {/* <div className="col-span-1">
         <div className="bg-[#F1CEDD] py-[12%] w-full px-[10%] flex justify-center items-center flex-col">
           <h5 className="uppercase">Book appointment</h5>
           <p className="py-[2%]">
@@ -38,7 +38,7 @@ export default function Banner() {
             Book Now
           </button>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

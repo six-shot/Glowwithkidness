@@ -10,8 +10,8 @@ export default function Home() {
     <div>
       <Hero />
     
-      <Footer/>
-     
+      {/* <Footer/>
+      */}
     </div>
   );
 }

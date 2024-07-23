@@ -8,7 +8,7 @@ export default function Hero() {
     <div className="relative w-full sm:h-[130vh] overflow-x-hidden">
       <Navbar />
       <Slider />
-      {/* <Banner/> */}
+      <Banner/>
     </div>
   );
 }
