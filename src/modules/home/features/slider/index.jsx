@@ -45,7 +45,7 @@ export default function Slider() {
   return (
     <main className="">
       <motion.div
-        className="absolute left-0 flex"
+        className="flex"
         style={{ x: xTranslation }}
         ref={ref}
         onHoverStart={() => {

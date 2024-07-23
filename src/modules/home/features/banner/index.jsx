@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Banner() {
   return (
-    <div className="sm:mt-[520px] mt-[500px] px-[5%] mb-[2%]">
+    <div className=" px-[5%] mt-[4%] mb-[2%]">
       <h5 className="text-black tracking-[6px] text-lg">
         MOST POPULAR SERVICES
       </h5>
