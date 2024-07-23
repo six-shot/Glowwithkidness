@@ -3,18 +3,18 @@ import React from 'react'
 export default function About() {
   return (
     <div className="px-[5%] py-[5%]">
-      <div className="grid grid-cols-3">
-        <div className="col-span-2">
-          <h4 className="text-black tracking-[6px] text-[40px] font-bold uppercase leading-[50px]">
+      <div className="grid sm:grid-cols-3 grid-cols-1">
+        <div className="sm:col-span-2">
+          <h4 className="text-black tracking-[6px] sm:text-[40px] text-[24px] font-bold uppercase leading-[35px] sm:leading-[50px]">
             We're thrilled you chose us for your beauty services and hope to see
             you regularly.
           </h4>
         </div>
         <div className="col-span-1"></div>
       </div>
-      <div className="grid grid-cols-3 gap-20 mt-[5%]">
-        <div className="col-span-2 w-full ">
-          <img className="w-full h-full" src="home.jpg" />
+      <div className="grid sm:grid-cols-3 grid-cols-1 gap-20 mt-[5%]">
+        <div className="sm:col-span-2 w-full ">
+          <img className="w-full h-[1000px] object-cover" src="home.jpg" />
         </div>
         <div className="col-span-1">
           <div className="flex flex-col">
