@@ -1,6 +1,22 @@
-import React from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import React, { useState } from "react";
 import { HiMenuAlt4 } from "react-icons/hi";
+import { Link } from "react-router-dom";
+import {
+  containerVars,
+  menuVars,
+  mobileLinkVars,
+} from "../../../../utils/motion";
 export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setOpen((prevOpen) => !prevOpen);
+  };
+  const closeMenu = () => {
+    setOpen(false);
+  };
+  const nav = [{ title: "Home" }, { title: "Home" }];
   return (
     <div className="">
       <div className=" px-[5%] w-full bg-[#000000] h-[5vh] text-center text-white text-xs flex justify-center items-center text-semibold">
@@ -26,8 +42,50 @@ export default function Navbar() {
           Book Now
         </button>
         <div className="sm:hidden flex">
-          <HiMenuAlt4  className="text-[30px] text-black" />
+          <HiMenuAlt4 onClick={toggleMenu} className="text-[30px] text-black" />
         </div>
+      </div>
+      <div>
+        {" "}
+        <AnimatePresence>
+          {open && (
+            <motion.div
+              variants={menuVars}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              className="fixed z-[10000000] left-0 top-0 h-screen w-full origin-top bg-black text-white p-10 "
+            >
+              <div className="flex h-full flex-col">
+                <div className="flex justify-between">
+                  <Link href="/">
+                    {" "}
+                    <div>
+                      <h4 className="text-white font-bold text-2xl">LOGO</h4>
+                    </div>
+                  </Link>
+                  <p className="text-md cursor-pointer " onClick={toggleMenu}>
+                    Close
+                  </p>
+                </div>
+                <motion.div
+                  variants={containerVars}
+                  initial="initial"
+                  animate="open"
+                  exit="initial"
+                  className="flex h-full flex-col items-center justify-center gap-4"
+                >
+                  <motion.div
+                    variants={mobileLinkVars}
+                    className="text-5xl uppercase "
+                  >
+                    <h5>Home</h5>
+                  </motion.div>
+                </motion.div>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </div>
   );
