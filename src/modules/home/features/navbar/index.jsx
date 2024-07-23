@@ -44,7 +44,7 @@ export default function Navbar() {
             <li>Contact us</li>
           </ul>
         </nav>
-        <button className="sm:flex hidden bg-black text-sm rounded-[8px] text-white sm:px-5 px-2 py-2.5">
+        <button className=" py-2.5 px-6 rounded-[50px] text-white bg-black">
           Book Now
         </button>
         <div className="sm:hidden flex">

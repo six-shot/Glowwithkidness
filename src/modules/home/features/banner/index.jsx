@@ -44,7 +44,7 @@ export default function Banner() {
           </div>
         </div>
       </div>
-      <button className="mt-4 sm:mt-8 bg-black text-sm rounded-[8px] text-white sm:px-8 px-4 sm:py-4 py-2.5">
+      <button className="mt-4 sm:mt-8 bg-black text-sm rounded-[50px] text-white sm:px-8 px-4 sm:py-3 py-2.5">
         See Pricelist
       </button>
     </div>
