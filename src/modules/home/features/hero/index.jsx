@@ -4,12 +4,9 @@ import Slider from "../slider";
 
 export default function Hero() {
   return (
-    <div className="relative w-full h-[100vh]">
-     
-        <Navbar />
-        <Slider/>
-  
-   
+    <div className="relative w-full h-[100vh] overflow-x-hidden">
+      <Navbar />
+      <Slider />
     </div>
   );
 }
