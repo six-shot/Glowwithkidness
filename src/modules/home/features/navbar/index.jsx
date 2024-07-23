@@ -24,7 +24,7 @@ export default function Navbar() {
     { title: "Contact Us" },
   ];
   return (
-    <div className="">
+    <div className="fixed z-[20] w-full ">
       <div className=" px-[5%] w-full bg-[#000000] h-[5vh] text-center text-white text-xs flex justify-center items-center text-semibold">
         <h6 className="sm:text-base text-xs">
           ALL APPOINTMENTS CAN BE RESCHEDULED ONLY ONCE! WITH YOUR

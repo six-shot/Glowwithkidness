@@ -43,7 +43,7 @@ export default function Slider() {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    <main className="">
+    <main className="mt-[15vh]">
       <motion.div
         className="flex"
         style={{ x: xTranslation }}
