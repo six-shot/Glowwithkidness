@@ -16,7 +16,13 @@ export default function Navbar() {
   const closeMenu = () => {
     setOpen(false);
   };
-  const nav = [{ title: "Home" }, { title: "Home" }];
+  const nav = [
+    { title: "Home" },
+    { title: "About Us" },
+    { title: "Hair Guide" },
+    { title: "For You" },
+    { title: "Contact Us" },
+  ];
   return (
     <div className="">
       <div className=" px-[5%] w-full bg-[#000000] h-[5vh] text-center text-white text-xs flex justify-center items-center text-semibold">
@@ -54,14 +60,14 @@ export default function Navbar() {
               initial="initial"
               animate="animate"
               exit="exit"
-              className="fixed z-[10000000] left-0 top-0 h-screen w-full origin-top bg-black text-white p-10 "
+              className="fixed z-[10000000] left-0 top-0 h-screen w-full origin-top bg-[#F1CEDD] text-black py-[7%] px-[5%] "
             >
               <div className="flex h-full flex-col">
                 <div className="flex justify-between">
                   <Link href="/">
                     {" "}
                     <div>
-                      <h4 className="text-white font-bold text-2xl">LOGO</h4>
+                      <img className="w-[70px]" src="/logo.png" />
                     </div>
                   </Link>
                   <p className="text-md cursor-pointer " onClick={toggleMenu}>
@@ -75,12 +81,11 @@ export default function Navbar() {
                   exit="initial"
                   className="flex h-full flex-col items-center justify-center gap-4"
                 >
-                  <motion.div
-                    variants={mobileLinkVars}
-                    className="text-5xl uppercase "
-                  >
-                    <h5>Home</h5>
-                  </motion.div>
+                  {nav.map((item) => (
+                    <div>
+                      <MobileNavLink title={item.title} />
+                    </div>
+                  ))}
                 </motion.div>
               </div>
             </motion.div>
@@ -90,3 +95,15 @@ export default function Navbar() {
     </div>
   );
 }
+const MobileNavLink = ({ title, href, onClick }) => {
+  return (
+    <motion.div
+      variants={mobileLinkVars}
+      className="text-2xl uppercase text-black"
+    >
+      <Link href={href} onClick={onClick}>
+        {title}
+      </Link>
+    </motion.div>
+  );
+};
